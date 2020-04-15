@@ -2,7 +2,7 @@ package by.nareiko.shape.repository.impl;
 
 import by.nareiko.shape.entity.Triangle;
 import by.nareiko.shape.repository.TriangleRepository;
-import by.nareiko.shape.specification.TriangleSpecification;
+import by.nareiko.shape.repository.TriangleSpecification;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -10,11 +10,37 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class TriangleRepositoryImpl implements TriangleRepository {
+    private static TriangleRepositoryImpl instanse;
     private List<Triangle> triangles = new ArrayList<>();
+
+    private TriangleRepositoryImpl(){}
+
+    public static TriangleRepositoryImpl getTriangleRepositoryImpl(){
+        if (instanse == null){
+            instanse = new TriangleRepositoryImpl();
+        }
+        return instanse;
+    }
+
     @Override
     public boolean add(Triangle triangle) {
         return triangles.add(triangle);
 
+    }
+
+    @Override
+    public boolean addAll(List<Triangle> triangleList) {
+        return triangles.addAll(triangleList);
+    }
+
+    @Override
+    public Triangle get(int index) {
+        return triangles.get(index);
+    }
+
+    @Override
+    public int size() {
+        return triangles.size();
     }
 
     @Override
@@ -23,10 +49,10 @@ public class TriangleRepositoryImpl implements TriangleRepository {
 
     }
 
-//    @Override
-//    public void sort(Comparator triangle) {
-//
-//    }
+    @Override
+    public void sort(Comparator<? super Triangle> comparator) {
+        triangles.sort(comparator);
+    }
 
     @Override
     public List<Triangle> query(TriangleSpecification specification) {

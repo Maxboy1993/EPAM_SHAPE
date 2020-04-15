@@ -212,6 +212,9 @@
       <workItem from="1586330591275" duration="135000" />
       <workItem from="1586330851626" duration="5142000" />
       <workItem from="1586347976492" duration="3413000" />
+      <workItem from="1586501443787" duration="7318000" />
+      <workItem from="1586593413540" duration="598000" />
+      <workItem from="1586935888467" duration="768000" />
     </task>
     <servers />
   </component>
@@ -223,21 +226,21 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="152" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.689@0.0.1280.689" timestamp="1586263823402" />
-    <state x="357" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1586352167280">
-      <screen x="0" y="0" width="1024" height="738" />
+    <state x="446" y="64" key="#com.intellij.ide.util.MemberChooser" timestamp="1586507601895">
+      <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="357" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1024.738@0.0.1024.738" timestamp="1586352167280" />
-    <state x="446" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1586248389734" />
+    <state x="446" y="64" key="#com.intellij.ide.util.MemberChooser/0.0.1280.689@0.0.1280.689" timestamp="1586507601895" />
     <state x="371" y="125" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1586334280990">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="297" y="134" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1024.738@0.0.1024.738" timestamp="1586277357496" />
     <state x="371" y="125" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1280.689@0.0.1280.689" timestamp="1586334280990" />
-    <state x="248" y="275" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586329356195">
+    <state x="248" y="275" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586503793574">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="198" y="295" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1024.738@0.0.1024.738" timestamp="1586277264698" />
-    <state x="248" y="275" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.689@0.0.1280.689" timestamp="1586329356195" />
+    <state x="248" y="275" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.689@0.0.1280.689" timestamp="1586503793574" />
     <state x="432" y="209" width="416" height="277" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586330163558">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -295,10 +298,10 @@
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1024.738@0.0.1024.738" timestamp="1586275798241" />
     <state x="121" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1586330985993" />
-    <state x="340" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1586330944710">
+    <state x="340" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1586594394062">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="340" y="173" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1586330944710" />
+    <state x="340" y="173" key="com.intellij.ide.util.TipDialog/0.0.1280.689@0.0.1280.689" timestamp="1586594394062" />
     <state x="216" y="269" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586276817331">
       <screen x="0" y="0" width="1024" height="738" />
     </state>

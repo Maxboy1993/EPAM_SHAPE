@@ -1,19 +1,29 @@
 package by.nareiko.shape.entity;
 
 import by.nareiko.shape.exception.TriangleException;
+import by.nareiko.shape.observer.TriangleObserver;
+import by.nareiko.shape.observer.TriangleObserverable;
+import by.nareiko.shape.observer.impl.AreaTriangleObserver;
+import by.nareiko.shape.observer.impl.PerimeterTriangleObserver;
 import by.nareiko.shape.validator.TriangleValidator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Triangle {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Triangle implements TriangleObserverable {
     static Logger logger = LogManager.getLogger();
+    private List<TriangleObserver> observers;
     private static long counter;
     private long id;
     private Point point1;
     private Point point2;
     private Point point3;
 
-    public Triangle(){}
+    public Triangle(){
+        initializeObservers();
+    }
 
     public Triangle(Point point1, Point point2, Point point3) throws TriangleException {
 
@@ -28,6 +38,7 @@ public class Triangle {
         setPoint3(point3);
         counter++;
         this.id = counter;
+        initializeObservers();
         }
 
     public Triangle(long id, Point point1, Point point2, Point point3) throws TriangleException {
@@ -41,6 +52,7 @@ public class Triangle {
         setPoint1(point1);
         setPoint2(point2);
         setPoint3(point3);
+        initializeObservers();
     }
 
     public Point getPoint1() {
@@ -91,8 +103,29 @@ public class Triangle {
         this.id = id;
     }
 
-    public boolean hasId(long desireId) {
-        return this.id == desireId;
+    private void initializeObservers(){
+        observers = new ArrayList<>();
+        observers.add(new PerimeterTriangleObserver());
+        observers.add(new AreaTriangleObserver());
+    }
+
+    @Override
+    public void attach(List<TriangleObserver> observerList) {
+        this.observers = observers;
+    }
+
+    @Override
+    public void detach(TriangleObserver observer) {
+        this.observers = null;
+    }
+
+    @Override
+    public void notifyObserver() {
+        for (int i = 0; i < observers.size(); i++) {
+            if (observers.get(i) != null){
+                observers.get(i).updateTriangle(this);
+            }
+        }
     }
 
     @Override
